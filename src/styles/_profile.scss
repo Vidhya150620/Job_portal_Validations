@@ -1,0 +1,442 @@
+// @mixin mediaquery-breakpoint($size) {
+//   @media (max-width: $size) {
+//     @content;
+//   }
+// }
+
+// .responsive-text {
+//   font-size: calc(1em - 6px);
+
+//   @include mediaquery-breakpoint(1200px) {
+//     font-size: calc(1em - 7px);
+//   }
+//   @include mediaquery-breakpoint(1000px) {
+//     font-size: calc(1em - 8px);
+//   }
+//   @include mediaquery-breakpoint(600px) {
+//     font-size: calc(1em - 9px);
+//   }
+// }
+
+// .h-100vh {
+//   height: 100vh;
+//   margin: 0%;
+// }
+
+// .h-50vh {
+//   height: 50vh;
+//   margin: 0%;
+// }
+
+// .responsive-text * {
+//   box-sizing: border-box;
+//   font-family: "Montserrat", sans-serif;
+//   margin: 0px;
+//   padding: 0%;
+// }
+
+// .container {
+//   width: 95%;
+//   max-width: 1300px;
+//   margin: auto;
+// }
+
+// .row {
+//   display: flex;
+//   flex: 1;
+// }
+
+// .d-flex {
+//   display: flex;
+// }
+
+// .d-inline-flex {
+//   display: inline-flex;
+// }
+
+// .flex-row {
+//   display: flex;
+// }
+
+// .flex-col {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .flex-wrap {
+//   flex-wrap: wrap;
+// }
+
+// .col {
+//   display: flex;
+//   flex-direction: column;
+//   flex: 1;
+// }
+
+// .text-center {
+//   text-align: center;
+// }
+
+// .text-line-none {
+//   text-decoration: none;
+// }
+
+// .text-red {
+//   color: red;
+// }
+
+// .text-bold {
+//   font-weight: bold;
+// }
+
+// .clr-dark {
+//   color: black;
+// }
+
+// .clr-light {
+//   color: white;
+// }
+
+// .clr-danger {
+//   color: red;
+// }
+
+// .clr-success {
+//   color: green;
+// }
+
+// .clr-primary {
+//   color: #0081f2;
+// }
+
+// .bg-light {
+//   background-color: white;
+//   color: black;
+// }
+// .bg-dark {
+//   background-color: black;
+//   color: white;
+// }
+
+// .bg-primary {
+//   background-color: #0081f2;
+//   color: white;
+// }
+
+// .circle {
+//   border-radius: 50%;
+// }
+
+// .center {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// @include mediaquery-breakpoint(600px) {
+//   .row-wrap-sm {
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//   }
+// }
+
+// .d-none {
+//   display: none;
+// }
+
+// .d-block {
+//   display: block;
+// }
+
+// // margin,padding,flex -----
+
+// $flex-value: (start, center, end, around, between, evenly, baseline, stretch);
+// $flex-property: (justify-content, align-items);
+
+// @each $property in $flex-property {
+//   @each $value in $flex-value {
+//     .#{$property}-#{$value} {
+//       @if $value == start {
+//         #{$property}: flex-start;
+//       } @else if $value == end {
+//         #{$property}: flex-end;
+//       } @else if $value == around {
+//         #{$property}: space-around;
+//       } @else if $value == between {
+//         #{$property}: space-between;
+//       } @else if $value == evenly {
+//         #{$property}: space-evenly;
+//       } @else {
+//         #{$property}: $value;
+//       }
+//     }
+//   }
+// }
+
+// $i: 1;
+// @while $i <= 10 {
+//   .m-#{$i} {
+//     margin: $i + rem;
+//   }
+//   .m-auto {
+//     margin-inline: auto;
+//   }
+//   .ml-auto {
+//     margin-left: auto;
+//   }
+//   .my-#{$i} {
+//     margin-block: $i + rem;
+//   }
+//   .mx-#{$i} {
+//     margin-inline: $i + rem;
+//   }
+//   .mt-#{$i} {
+//     margin-top: $i + rem;
+//   }
+//   .ml-#{$i} {
+//     margin-left: $i + rem;
+//   }
+
+//   .mb-#{$i} {
+//     margin-bottom: $i + rem;
+//   }
+//   .mr-#{$i} {
+//     margin-right: $i + rem;
+//   }
+//   .p-#{$i} {
+//     padding: $i + rem;
+//   }
+//   .p-auto {
+//     padding-inline: auto;
+//   }
+//   .py-#{$i} {
+//     padding-block: $i + rem;
+//   }
+//   .px-#{$i} {
+//     padding-inline: $i + rem;
+//   }
+//   .pt-#{$i} {
+//     padding-top: $i + rem;
+//   }
+//   .pl-#{$i} {
+//     padding-left: $i + rem;
+//   }
+//   .pb-#{$i} {
+//     padding-bottom: $i + rem;
+//   }
+//   .pr-#{$i} {
+//     padding-right: $i + rem;
+//   }
+
+//   $i: $i + 1;
+// }
+
+// // margin,padding,flex -----
+
+// // font-size ----
+
+// @for $i from 10 through 60 {
+//   .fs-#{$i} {
+//     font-size: $i + px;
+//   }
+// }
+
+// // font-size ----
+
+// // font-size-rem ----
+
+// $f: 1;
+
+// @for $i from 1 through 60 {
+//   .f-#{$i} {
+//     font-size: $f + rem;
+//   }
+//   $f: $f + 0.2;
+// }
+
+// // font-size-rem ----
+
+// // font-weight ----
+
+// $fw: 100;
+
+// @for $i from 1 through 10 {
+//   .fw-#{$fw} {
+//     font-weight: $fw;
+//   }
+//   $fw: $fw + 100;
+// }
+
+// // font-weight ----
+
+// .pe-auto {
+//   cursor: pointer;
+// }
+
+// // width
+
+// .w-10 {
+//   width: 100%;
+// }
+
+// .gap-1 {
+//   gap: 1rem;
+// }
+
+// .gap-2 {
+//   gap: 2rem;
+// }
+
+// .gap-3 {
+//   gap: 3rem;
+// }
+
+// $gap: 1;
+
+// @for $i from 1 through 60 {
+//   .g-#{$i} {
+//     gap: $gap + rem;
+//   }
+//   $gap: $gap + 0.2;
+// }
+
+// // ------------------------------------------------------------------
+
+// .jp-user-dashboard {
+//   font-size: 2rem;
+//   min-height: 100vh;
+//   background-color: rgba(128, 128, 128, 0.052);
+
+//   .text-primary {
+//     color: rgb(54, 54, 54);
+//   }
+
+//   .text-secondary {
+//     color: #2a2a2a;
+//   }
+
+//   .main-wrapper {
+//     width: 95%;
+//     max-width: 1300px;
+//     margin: auto;
+//     transition: all 0.5s;
+//     // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.107);
+
+//     &:hover {
+//       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.108);
+//     }
+
+//     .bg-view {
+//       position: relative;
+//       height: 300px;
+//       width: 100%;
+//       background: linear-gradient(
+//         90deg,
+//         rgb(108, 223, 249) 0%,
+//         rgb(126, 150, 246) 100%
+//       );
+//       background-image: url("../../../Image/candidate_bg.jpg");
+//       background-size: cover;
+//       background-repeat: no-repeat;
+//     }
+
+//     .info {
+//       padding-inline: 5rem;
+//       .profile {
+//         translate: 0% -25%;
+//         .image {
+//           max-width: 120px;
+
+//           img {
+//             height: 12rem;
+//             width: 12rem;
+//             object-fit: cover;
+//             border-radius: 50%;
+//             border: 5px solid rgb(255, 255, 255);
+//             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.333);
+//           }
+//         }
+//       }
+//       .group-btns {
+//         > * {
+//           padding-inline: 2rem;
+//           padding-block: 0.5rem;
+//         }
+//         .view-resume-btn {
+//           color: black;
+//           border: 1px solid black;
+//         }
+//         .call-btn {
+//           color: white;
+//           background-color: #00af5b;
+//         }
+//       }
+//     }
+
+//     .profile {
+//       @include mediaquery-breakpoint(1000px) {
+//         flex-wrap: wrap;
+//       }
+
+//       .personal-info {
+//         width: 90%;
+//         margin-inline: auto;
+//       }
+
+//       .career-pref {
+//         width: 90%;
+//         margin-inline: auto;
+//       }
+
+//       .profile-about {
+//         width: 90%;
+//         margin-inline: auto;
+//       }
+
+//       .projects-details {
+//         width: 90%;
+//         margin-inline: auto;
+//       }
+
+//       .skill {
+//         font-size: 1.5rem;
+//         color: rgb(109, 109, 109);
+//         background-color: #eff1ff;
+//         border-radius: 5px;
+//         margin-right: 15px;
+//         margin-bottom: 15px;
+//       }
+//     }
+//   }
+
+//   footer {
+//     font-size: 1rem;
+//     padding-block: 5px;
+//     // color: black;
+//     background: linear-gradient(
+//       90deg,
+//       rgb(108, 223, 249) 0%,
+//       rgb(126, 150, 246) 100%
+//     );
+//   }
+// }
+
+// .jp-user-dashboard > * {
+//   padding: 0%;
+//   margin: 0%;
+//   box-sizing: border-box;
+// }
+
+// @media (max-width: 800px) {
+//   .info {
+//     // background-color: #00af5b;
+//     // padding-block: 10px;
+//     flex-direction: column;
+//     .profile {
+//       flex-direction: column;
+//       > p {
+//         margin-bottom: 0%;
+//       }
+//     }
+//   }
+// }
